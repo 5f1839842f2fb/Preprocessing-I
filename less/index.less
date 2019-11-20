@@ -59,10 +59,15 @@ html, body {
 
 @font1: 'Rubik', sans-serif;
 @lightlightgrey: #E9ECEF;
+
+.h2mixin {
+	font-family: @font1;
+	font-size: 2.5rem;
+}
+//I couldn't think of a genuine usecase for a 2nd mixin and frankly, the one above is kind of pointless too.
 .container {
 	margin: auto;
 	max-width: 1200px;
-	//border: 1px dashed black;
 	
 	.main {
 		margin: 5%;
@@ -145,12 +150,12 @@ html, body {
 			display: flex;
 			justify-content: space-between;
 			margin: 5% 4%;
+			
 			.mid-left {
 				width: 52%;
 
 				h2 {
-					font-family: @font1;
-					font-size: 2.5rem;
+					.h2mixin();
 				}
 				p {
 					font-family: @font1;
@@ -163,8 +168,7 @@ html, body {
 				width: 42%;
 
 				h2 {
-					font-family: @font1;
-					font-size: 2.5rem;
+					.h2mixin();
 				}
 				ul {
 					margin: 4% 0;
@@ -176,6 +180,51 @@ html, body {
 					}
 				}
 			}
+		}
+		@media only screen and (max-width: 500px) { //NOT WORKING????
+			.mid-section {
+				flex-direction: column;
+				
+				.mid-left {
+					width: 100%;
+				}
+				.mid-right {
+					width: 100%;
+				}
+			}
+		}
+		.lower-section {
+			margin: 0 4%;
+			h2 {
+				margin: 2% 0;
+				.h2mixin();
+			}
+			table {
+				width: 100%;
+				font-family: @font1;
+
+				tr {
+					&:nth-child(even) {
+						background-color: #F2F2F2;
+					}
+					th {
+						border-top: 1px solid lightgrey;
+						border-bottom: 1px solid lightgrey;
+						text-align: left;
+						padding: 1rem;
+						font-weight: bold;
+					}
+					td {
+						padding: 1rem;
+					}
+				}
+			}
+		}
+		h3 {
+			margin: 0 auto;
+			margin-top: 7%;
+			font-family: @font1;
+			font-size: 1rem;
 		}
 	}
 }

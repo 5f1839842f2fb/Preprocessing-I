@@ -134,6 +134,10 @@ html,
 body {
   height: 100%;
 }
+.h2mixin {
+  font-family: 'Rubik', sans-serif;
+  font-size: 2.5rem;
+}
 .container {
   margin: auto;
   max-width: 1200px;
@@ -245,4 +249,46 @@ body {
   font-size: 1.4rem;
   border: 1px solid lightgrey;
   padding: 3%;
+}
+@media only screen and (max-width: 500px) {
+  .container .main .mid-section {
+    flex-direction: column;
+  }
+  .container .main .mid-section .mid-left {
+    width: 100%;
+  }
+  .container .main .mid-section .mid-right {
+    width: 100%;
+  }
+}
+.container .main .lower-section {
+  margin: 0 4%;
+}
+.container .main .lower-section h2 {
+  margin: 2% 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 2.5rem;
+}
+.container .main .lower-section table {
+  width: 100%;
+  font-family: 'Rubik', sans-serif;
+}
+.container .main .lower-section table tr:nth-child(even) {
+  background-color: #F2F2F2;
+}
+.container .main .lower-section table tr th {
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  text-align: left;
+  padding: 1rem;
+  font-weight: bold;
+}
+.container .main .lower-section table tr td {
+  padding: 1rem;
+}
+.container .main h3 {
+  margin: 0 auto;
+  margin-top: 7%;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
 }
