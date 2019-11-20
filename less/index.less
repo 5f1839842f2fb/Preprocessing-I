@@ -50,10 +50,181 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+@font1: 'Rubik', sans-serif;
+@lightlightgrey: #E9ECEF;
+
+.h2mixin {
+	font-family: @font1;
+	font-size: 2.5rem;
+}
+//I couldn't think of a genuine usecase for a 2nd mixin and frankly, the one above is kind of pointless too.
+.container {
+	margin: auto;
+	max-width: 1200px;
+	
+	.main {
+		margin: 5%;
+		display: flex;
+		flex-direction: column;
+
+		nav {
+			display: flex;
+			width: 40%;
+			justify-content: space-between;
+			margin-bottom: 3%;
+			margin-left: auto;
+
+			a, a:visited {
+				font-family: @font1;
+				color: black;
+				text-decoration: none;
+				font-size: 1.5rem;
+
+				&:hover {
+					color: grey;
+				}
+
+				&:active {
+					color: lightblue;
+				}
+			}
+		}
+		.top-section {
+			width: 100%;
+			height: 45rem;
+			background-color: @lightlightgrey;
+			border-radius: 5px;
+			padding: 4%;
+
+			.top-section-upper {
+				border-bottom: 1px solid grey;
+				padding: 3% 0;
+
+				h1 {
+					font-family: @font1;
+					font-size: 4rem;
+					margin: 2% 0;
+				}
+				h2 {
+					font-family: @font1;
+					font-size: 1.5rem;
+				}
+			}
+			.top-section-lower {
+				margin: 2% 0;
+
+				p {
+					font-family: @font1;
+					font-size: 1.2rem;
+				}
+			}
+			button {
+				background-color: grey;
+				width: 10rem;
+				height: 3rem;
+				border-radius: 6px;
+				color: white;
+				font-family: @font1;
+				font-size: 1.2rem;
+				text-decoration: none;
+				transition-duration: 0.2s;
+
+				&:hover {
+					background-color: black;
+					color: white;
+				}
+				a, a:visited {
+					text-decoration: none;
+					color: white;
+				}
+			}
+		}
+		.mid-section {
+			display: flex;
+			justify-content: space-between;
+			margin: 5% 4%;
+			
+			.mid-left {
+				width: 52%;
+
+				h2 {
+					.h2mixin();
+				}
+				p {
+					font-family: @font1;
+					font-size: 1.2rem;
+					margin: 4% 0;
+					line-height: 1.5rem;
+				}
+			}
+			.mid-right {
+				width: 42%;
+
+				h2 {
+					.h2mixin();
+				}
+				ul {
+					margin: 4% 0;
+					li { 
+						font-family: @font1;
+						font-size: 1.4rem;
+						border: 1px solid lightgrey;
+						padding: 3%;
+					}
+				}
+			}
+		}
+		@media only screen and (max-width: 500px) { //NOT WORKING????
+			.mid-section {
+				flex-direction: column;
+				
+				.mid-left {
+					width: 100%;
+				}
+				.mid-right {
+					width: 100%;
+				}
+			}
+		}
+		.lower-section {
+			margin: 0 4%;
+			h2 {
+				margin: 2% 0;
+				.h2mixin();
+			}
+			table {
+				width: 100%;
+				font-family: @font1;
+
+				tr {
+					&:nth-child(even) {
+						background-color: #F2F2F2;
+					}
+					th {
+						border-top: 1px solid lightgrey;
+						border-bottom: 1px solid lightgrey;
+						text-align: left;
+						padding: 1rem;
+						font-weight: bold;
+					}
+					td {
+						padding: 1rem;
+					}
+				}
+			}
+		}
+		h3 {
+			margin: 0 auto;
+			margin-top: 7%;
+			font-family: @font1;
+			font-size: 1rem;
+		}
+	}
+}
