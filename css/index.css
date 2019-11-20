@@ -167,6 +167,82 @@ body {
 }
 .container .main .top-section {
   width: 100%;
-  height: 40rem;
-  background-color: lightgrey;
+  height: 45rem;
+  background-color: #E9ECEF;
+  border-radius: 5px;
+  padding: 4%;
+}
+.container .main .top-section .top-section-upper {
+  border-bottom: 1px solid grey;
+  padding: 3% 0;
+}
+.container .main .top-section .top-section-upper h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 4rem;
+  margin: 2% 0;
+}
+.container .main .top-section .top-section-upper h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.5rem;
+}
+.container .main .top-section .top-section-lower {
+  margin: 2% 0;
+}
+.container .main .top-section .top-section-lower p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+}
+.container .main .top-section button {
+  background-color: grey;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 6px;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+.container .main .top-section button:hover {
+  background-color: black;
+  color: white;
+}
+.container .main .top-section button a,
+.container .main .top-section button a:visited {
+  text-decoration: none;
+  color: white;
+}
+.container .main .mid-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 4%;
+}
+.container .main .mid-section .mid-left {
+  width: 52%;
+}
+.container .main .mid-section .mid-left h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 2.5rem;
+}
+.container .main .mid-section .mid-left p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  margin: 4% 0;
+  line-height: 1.5rem;
+}
+.container .main .mid-section .mid-right {
+  width: 42%;
+}
+.container .main .mid-section .mid-right h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 2.5rem;
+}
+.container .main .mid-section .mid-right ul {
+  margin: 4% 0;
+}
+.container .main .mid-section .mid-right ul li {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.4rem;
+  border: 1px solid lightgrey;
+  padding: 3%;
 }
